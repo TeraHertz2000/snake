@@ -1,0 +1,25 @@
+{
+  "basic_info": {
+    "name": "Calquence (Acalabrutinib)",
+    "target": "Bruton Tyrosine Kinase (BTK)",
+    "company": "AstraZeneca (Acerta Pharma)"
+  },
+  "development": {
+    "therapeutic_area": "Oncology",
+    "development_stage": "Approved",
+    "approval_year": "2017"
+  },
+  "mechanism": {
+    "mechanism_of_action": "Second-generation BTK inhibitor that covalently binds to BTK, inhibiting B-cell receptor signaling and preventing B-cell proliferation and survival",
+    "drug_modality": "Small molecule"
+  },
+  "clinical": {
+    "indications": "Chronic lymphocytic leukemia (CLL), mantle cell lymphoma (MCL), Waldenström's macroglobulinemia",
+    "clinical_trials": "ECHO, ASCEND, ACE-CL-001 [uncertain]"
+  },
+  "market": {
+    "commercial_name": "Calquence",
+    "market_position": "Leading second-generation BTK inhibitor, approved in US and EU, blockbuster status [uncertain]"
+  },
+  "uncertain": ["clinical_trials", "market_position"]
+}

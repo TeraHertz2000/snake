@@ -1,0 +1,42 @@
+topic: AstraZeneca Target Molecules
+items:
+  - name: Tagrisso (Osimertinib)
+    category: Oncology
+    description: EGFR inhibitor for non-small cell lung cancer
+  - name: Lynparza (Olaparib)
+    category: Oncology
+    description: PARP inhibitor for ovarian and breast cancer
+  - name: Imfinzi (Durvalumab)
+    category: Oncology
+    description: PD-L1 checkpoint inhibitor
+  - name: Farxiga (Dapagliflozin)
+    category: Cardiovascular
+    description: SGLT2 inhibitor for diabetes and heart failure
+  - name: Enhertu (Trastuzumab deruxtecan)
+    category: Oncology
+    description: HER2 antibody-drug conjugate for breast cancer
+  - name: Calquence (Acalabrutinib)
+    category: Oncology
+    description: BTK inhibitor for chronic lymphocytic leukemia
+  - name: Camizestrant
+    category: Oncology
+    description: Oral SERD for breast cancer, NDA accepted Jan 2026
+  - name: Gefurulimab
+    category: Immunology
+    description: Antibody inhibiting complement C5 for myasthenia gravis
+  - name: Sonesitatug vedotin
+    category: Oncology
+    description: Claudin18.2-targeted ADC for gastric cancer (Phase 3)
+  - name: Saruparib
+    category: Oncology
+    description: PARP inhibitor for prostate cancer
+  - name: Torvunsam
+    category: Oncology
+    description: Folate receptor targeted ADC for ovarian cancer
+  - name: Rilvegostomig
+    category: Oncology
+    description: Checkpoint inhibitor for non-small cell lung cancer
+execution:
+  batch_size: 3
+  items_per_agent: 4
+  output_dir: ./results

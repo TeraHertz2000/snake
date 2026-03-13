@@ -1,0 +1,25 @@
+{
+  "basic_info": {
+    "name": "Farxiga (Dapagliflozin)",
+    "target": "Sodium-Glucose Cotransporter 2 (SGLT2)",
+    "company": "AstraZeneca"
+  },
+  "development": {
+    "therapeutic_area": "Cardiovascular/Metabolic",
+    "development_stage": "Approved",
+    "approval_year": "2014"
+  },
+  "mechanism": {
+    "mechanism_of_action": "SGLT2 inhibitor that blocks glucose reabsorption in the renal proximal tubule, promoting urinary glucose excretion and improving glycemic control and heart/kidney outcomes",
+    "drug_modality": "Small molecule"
+  },
+  "clinical": {
+    "indications": "Type 2 diabetes, heart failure (reduced ejection fraction), chronic kidney disease, pediatric type 2 diabetes",
+    "clinical_trials": "DECLARE-TIMI 58, DAPA-CKD, DAPA-HF [uncertain]"
+  },
+  "market": {
+    "commercial_name": "Farxiga",
+    "market_position": "Leading SGLT2 inhibitor, approved in 126+ countries, blockbuster status [uncertain]"
+  },
+  "uncertain": ["clinical_trials", "market_position"]
+}

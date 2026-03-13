@@ -1,0 +1,25 @@
+{
+  "basic_info": {
+    "name": "Enhertu (Trastuzumab deruxtecan)",
+    "target": "Human Epidermal Growth Factor Receptor 2 (HER2)",
+    "company": "AstraZeneca/Daiichi Sankyo"
+  },
+  "development": {
+    "therapeutic_area": "Oncology",
+    "development_stage": "Approved",
+    "approval_year": "2019"
+  },
+  "mechanism": {
+    "mechanism_of_action": "Antibody-drug conjugate (ADC) that delivers deruxtecan (topoisoisomerase I inhibitor) directly to HER2-expressing tumor cells, causing DNA damage and apoptosis",
+    "drug_modality": "Antibody-drug conjugate (ADC)"
+  },
+  "clinical": {
+    "indications": "HER2-positive breast cancer, HER2-low/ultralow breast cancer, gastric cancer, non-small cell lung cancer, colorectal cancer",
+    "clinical_trials": "DESTINY-Breast03, DESTINY-Gastric01, DESTINY-Lung01 [uncertain]"
+  },
+  "market": {
+    "commercial_name": "Enhertu",
+    "market_position": "Leading HER2-targeted ADC, blockbuster status, FDA priority review for early breast cancer (2026) [uncertain]"
+  },
+  "uncertain": ["clinical_trials", "market_position"]
+}

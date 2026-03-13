@@ -1,0 +1,25 @@
+{
+  "basic_info": {
+    "name": "Imfinzi (Durvalumab)",
+    "target": "Programmed Death-Ligand 1 (PD-L1)",
+    "company": "AstraZeneca"
+  },
+  "development": {
+    "therapeutic_area": "Oncology",
+    "development_stage": "Approved",
+    "approval_year": "2017"
+  },
+  "mechanism": {
+    "mechanism_of_action": "Monoclonal antibody that binds to PD-L1, blocking interaction with PD-1 receptors and restoring T-cell immune activity against tumor cells",
+    "drug_modality": "Monoclonal antibody"
+  },
+  "clinical": {
+    "indications": "Non-small cell lung cancer (Stage III), small cell lung cancer (limited-stage), muscle-invasive bladder cancer, gastric/gastroesophageal cancer (perioperative)",
+    "clinical_trials": "PACIFIC, ADRIATIC, MATTERHORN, NIAGARA [uncertain]"
+  },
+  "market": {
+    "commercial_name": "Imfinzi",
+    "market_position": "Leading PD-L1 inhibitor, blockbuster status [uncertain]"
+  },
+  "uncertain": ["clinical_trials", "market_position"]
+}

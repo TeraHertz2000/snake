@@ -1,0 +1,25 @@
+{
+  "basic_info": {
+    "name": "Gefurulimab",
+    "target": "Complement Protein C5",
+    "company": "AstraZeneca"
+  },
+  "development": {
+    "therapeutic_area": "Immunology",
+    "development_stage": "Phase 3 (NDA accepted Jan 2026)",
+    "approval_year": "Pending"
+  },
+  "mechanism": {
+    "mechanism_of_action": "Dual-binding nanobody that binds to C5 protein in the terminal complement cascade, blocking complement activation and preventing immune-mediated damage to neuromuscular junctions",
+    "drug_modality": "Nanobody (single-domain antibody)"
+  },
+  "clinical": {
+    "indications": "Generalized myasthenia gravis (gMG)",
+    "clinical_trials": "PREVAIL Phase 3 [uncertain]"
+  },
+  "market": {
+    "commercial_name": "Gefurulimab",
+    "market_position": "First once-weekly self-administered complement inhibitor for gMG [uncertain]"
+  },
+  "uncertain": ["clinical_trials", "market_position"]
+}

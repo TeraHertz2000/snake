@@ -1,0 +1,25 @@
+{
+  "basic_info": {
+    "name": "Tagrisso (Osimertinib)",
+    "target": "Epidermal Growth Factor Receptor (EGFR)",
+    "company": "AstraZeneca"
+  },
+  "development": {
+    "therapeutic_area": "Oncology",
+    "development_stage": "Approved",
+    "approval_year": "2015"
+  },
+  "mechanism": {
+    "mechanism_of_action": "Third-generation EGFR tyrosine kinase inhibitor that irreversibly binds to mutant EGFR (including T790M, L858R, exon 19 deletions), blocking signal transduction and inducing tumor cell apoptosis",
+    "drug_modality": "Small molecule"
+  },
+  "clinical": {
+    "indications": "Locally advanced or metastatic EGFR-mutated non-small cell lung cancer (NSCLC), including first-line treatment, adjuvant therapy, and in combination with chemotherapy for advanced disease",
+    "clinical_trials": "FLAURA, ADAURA, AURA3 [uncertain]"
+  },
+  "market": {
+    "commercial_name": "Tagrisso",
+    "market_position": "Leading EGFR inhibitor for NSCLC, blockbuster status [uncertain]"
+  },
+  "uncertain": ["clinical_trials", "market_position"]
+}

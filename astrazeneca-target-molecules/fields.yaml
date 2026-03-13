@@ -1,0 +1,51 @@
+# Field definitions for AstraZeneca Target Molecules research
+
+basic_info:
+  name:
+    description: Drug name (brand and generic)
+    detail_level: brief
+  target:
+    description: Molecular target (protein/enzyme/receptor)
+    detail_level: brief
+  company:
+    description: Developer/manufacturer
+    detail_level: brief
+
+development:
+  therapeutic_area:
+    description: Main indication area
+    detail_level: brief
+  development_stage:
+    description: Current clinical trial phase or approval status
+    detail_level: brief
+  approval_year:
+    description: Initial FDA/EMA approval year
+    detail_level: brief
+
+mechanism:
+  mechanism_of_action:
+    description: How the molecule inhibits or activates its target
+    detail_level: moderate
+  drug_modality:
+    description: Type of therapeutic (small molecule, antibody, ADC, etc.)
+    detail_level: moderate
+
+clinical:
+  indications:
+    description: Approved or potential indications
+    detail_level: detailed
+  clinical_trials:
+    description: Key clinical trial identifiers and results
+    detail_level: detailed
+
+market:
+  commercial_name:
+    description: Brand name(s)
+    detail_level: brief
+  market_position:
+    description: Market share or competitive positioning
+    detail_level: moderate
+
+uncertain:
+  - clinical_trials
+  - market_position

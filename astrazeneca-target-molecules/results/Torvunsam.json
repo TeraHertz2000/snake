@@ -1,0 +1,25 @@
+{
+  "basic_info": {
+    "name": "Torvunsam (AZD5335)",
+    "target": "Folate Receptor Alpha (FRα)",
+    "company": "AstraZeneca"
+  },
+  "development": {
+    "therapeutic_area": "Oncology",
+    "development_stage": "Phase 1/2",
+    "approval_year": "Pending"
+  },
+  "mechanism": {
+    "mechanism_of_action": "Folate receptor alpha (FRα)-targeted antibody-drug conjugate (ADC) loaded with topoisomerase 1 inhibitor (TOP1i), delivering cytotoxic payload to FRα-expressing tumor cells",
+    "drug_modality": "Antibody-drug conjugate (ADC)"
+  },
+  "clinical": {
+    "indications": "Ovarian cancer (FRα-expressing), other FRα-positive solid tumors",
+    "clinical_trials": "NCT05797168 [uncertain]"
+  },
+  "market": {
+    "commercial_name": "Torvunsam (AZD5335)",
+    "market_position": "Next-generation FRα-targeted ADC, showed 82% ORR in preclinical models [uncertain]"
+  },
+  "uncertain": ["clinical_trials", "market_position"]
+}

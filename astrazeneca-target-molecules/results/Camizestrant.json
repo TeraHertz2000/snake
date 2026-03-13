@@ -1,0 +1,25 @@
+{
+  "basic_info": {
+    "name": "Camizestrant",
+    "target": "Estrogen Receptor (ERα)",
+    "company": "AstraZeneca"
+  },
+  "development": {
+    "therapeutic_area": "Oncology",
+    "development_stage": "Phase 3 (NDA accepted Jan 2026)",
+    "approval_year": "Pending"
+  },
+  "mechanism": {
+    "mechanism_of_action": "Next-generation oral selective estrogen receptor degrader (SERD) and complete ER antagonist that degrades ERα and blocks estrogen signaling, overcoming ESR1 mutations",
+    "drug_modality": "Small molecule"
+  },
+  "clinical": {
+    "indications": "HR-positive, HER2-negative breast cancer (1st-line and 2nd-line settings)",
+    "clinical_trials": "SERENA-2, SERENA-4, SERENA-6 [uncertain]"
+  },
+  "market": {
+    "commercial_name": "Camizestrant",
+    "market_position": "First next-gen oral SERD with consistent PFS benefit, potential blockbuster [uncertain]"
+  },
+  "uncertain": ["clinical_trials", "market_position"]
+}

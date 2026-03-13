@@ -1,0 +1,25 @@
+{
+  "basic_info": {
+    "name": "Rilvegostomig (AZD2936)",
+    "target": "PD-1 and TIGIT",
+    "company": "AstraZeneca"
+  },
+  "development": {
+    "therapeutic_area": "Oncology",
+    "development_stage": "Phase 1/2",
+    "approval_year": "Pending"
+  },
+  "mechanism": {
+    "mechanism_of_action": "Bispecific monoclonal antibody targeting both PD-1 and TIGIT receptors, designed to enhance antitumor activity beyond anti-PD-(L)1 therapy by activating T-cell immune response",
+    "drug_modality": "Bispecific monoclonal antibody"
+  },
+  "clinical": {
+    "indications": "Non-small cell lung cancer (NSCLC), PD-L1-positive metastatic NSCLC",
+    "clinical_trials": "ARTEMIDE-01, ARTEMIDE-Lung04 [uncertain]"
+  },
+  "market": {
+    "commercial_name": "Rilvegostomig",
+    "market_position": "First PD-1/TIGIT bispecific in development, promising early efficacy [uncertain]"
+  },
+  "uncertain": ["clinical_trials", "market_position"]
+}

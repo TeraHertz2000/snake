@@ -1,0 +1,25 @@
+{
+  "basic_info": {
+    "name": "Saruparib",
+    "target": "PARP1 (Poly ADP-Ribose Polymerase 1)",
+    "company": "AstraZeneca"
+  },
+  "development": {
+    "therapeutic_area": "Oncology",
+    "development_stage": "Phase 1/2",
+    "approval_year": "Pending"
+  },
+  "mechanism": {
+    "mechanism_of_action": "PARP1-selective inhibitor that selectively inhibits and traps PARP1 with minimal effect on PARP2, potentially offering improved therapeutic window vs non-selective PARP inhibitors",
+    "drug_modality": "Small molecule"
+  },
+  "clinical": {
+    "indications": "Metastatic castration-sensitive prostate cancer (mCSPC), metastatic castration-resistant prostate cancer (mCRPC)",
+    "clinical_trials": "PETRANHA, EvoPAR-Prostate01 [uncertain]"
+  },
+  "market": {
+    "commercial_name": "Saruparib",
+    "market_position": "Potential best-in-class PARP1-selective inhibitor [uncertain]"
+  },
+  "uncertain": ["clinical_trials", "market_position"]
+}
