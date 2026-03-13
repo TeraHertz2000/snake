@@ -38,3 +38,7 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+## Installed Skills
+
+- **youtube-transcript** — Download YouTube video transcripts using yt-dlp. Activates when user provides a YouTube URL and wants the transcript.

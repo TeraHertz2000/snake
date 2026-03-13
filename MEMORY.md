@@ -47,6 +47,15 @@ _This is where I store important context that should persist across sessions._
 - Set up tera-vault/fitness/ with workout-log and progress-log templates
 - Gym: 25-min morning sessions (6:20-6:45 AM)
 - Awaiting intake questionnaire for full program design
+- **Week 1 Baseline CALIBRATED (RPE 7-8):**
+  - Lat Pulldown: 115-120 lbs
+  - Machine Chest Press: 90-100 lbs
+  - Machine OHP: 60-65 lbs
+  - DB Lateral Raise: 10 lbs
+  - DB Bicep Curl: 17.5 lbs
+  - Cable Triceps Pushdown: 70-75 lbs
+  - Cable Crunch: 110 lbs
+  - Cable Row: 90-95 lbs
 
 ## Time Blocking System (as of March 2026)
 Noah's official time blocking method:

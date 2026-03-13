@@ -126,9 +126,14 @@ Rules:
 
 ## Notes from This Session
 
+- **Workout Schedule:**
+  - Monday: ~20 min (short morning session)
+  - Tuesday: ~45 min (after work)
+  - Thursday: ~45 min (after work)
+  - Saturday: longer workout (morning)
+  - Sunday: workout (morning)
 - Gym/town trips: 20 min drive each way
 - Bedtime: 8pm (never block beyond)
 - Work starts: 9 AM
 - Morning routine: Walk dogs → Shower → Work
-- 25-min gym sessions work well
 - Table for John: pending
