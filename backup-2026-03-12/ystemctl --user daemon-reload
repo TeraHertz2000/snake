@@ -1,0 +1,10 @@
+[0;1;31mWarning:[0m The unit file, source configuration file or drop-ins of openclaw-gateway.service changed on disk. Run 'systemctl --user daemon-reload' to reload units.
+● openclaw-gateway.service - OpenClaw Gateway (v2026.2.9)
+     Loaded: loaded (/home/linuxuser/.config/systemd/user/openclaw-gateway.service; enabled; vendor preset: enabled)
+     Active: activating (auto-restart) (Result: exit-code) since Wed 2026-02-11 03:18:50 UTC; 3s ago
+    Process: 18569 ExecStart=/usr/bin/node /usr/lib/node_modules/openclaw/dist/index.js gateway --port 18789 [0;1;31m(code=exited, status=1/FAILURE)[0m
+   Main PID: 18569 (code=exited, status=1/FAILURE)
+        CPU: 4.854s
+
+Feb 11 03:18:50 assistant-node systemd[1423]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mopenclaw-gateway.service: Failed with result 'exit-code'.[0m
+Feb 11 03:18:50 assistant-node systemd[1423]: openclaw-gateway.service: Consumed 4.854s CPU time.

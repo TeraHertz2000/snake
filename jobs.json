@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "8e183fd9-a9ab-4e36-9433-bc077c8e87fd",
+      "agentId": "main",
+      "name": "auto-update",
+      "enabled": true,
+      "createdAtMs": 1772397868623,
+      "updatedAtMs": 1773720104871,
+      "schedule": {
+        "expr": "0 4 * * *",
+        "kind": "cron"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run openclaw update check. If updates available, apply them. Then restart the gateway. After completing, send a message to Discord channel 1481072502724759602 using the message tool with action=send, channel=discord, message=\"🔄 Auto-update complete - [brief result summary]\". Use model=minimax-portal/MiniMax-M2.1. Report the results here.",
+        "model": "minimax-portal/MiniMax-M2.1"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "discord",
+        "to": "channel:1481072502724759602"
+      },
+      "state": {
+        "nextRunAtMs": 1773806400000,
+        "lastRunAtMs": 1773720000012,
+        "lastStatus": "error",
+        "lastDurationMs": 104859,
+        "consecutiveErrors": 5,
+        "lastRunStatus": "error",
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "lastDeliveryError": "⚠️ ✉️ Message failed",
+        "lastError": "⚠️ ✉️ Message failed"
+      }
+    },
+    {
+      "id": "9c2470ac-ba94-42fa-89d6-a5c0e3b06e9f",
+      "agentId": "main",
+      "name": "daily-backup",
+      "enabled": true,
+      "createdAtMs": 1772397876630,
+      "updatedAtMs": 1773635582033,
+      "schedule": {
+        "expr": "30 4 * * *",
+        "kind": "cron"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run a full backup to the openclaw-backup repo: 1) Copy all critical files from ~/.openclaw to workspace-backup (excluding secrets - use placeholders for tokens/keys). 2) Commit with date. 3) Push to https://github.com/TeraHertz2000/openclaw-backup. 4) After success, send a message to Discord channel 1481072502724759602 using the message tool with action=send, channel=discord, message=\"✅ Backup complete - [summary of what was backed up]\". Use model=minimax-portal/MiniMax-M2.1. Report the results here."
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "discord",
+        "to": "channel:1481072502724759602"
+      },
+      "state": {
+        "nextRunAtMs": 1773721800000,
+        "lastRunAtMs": 1773635400009,
+        "lastStatus": "error",
+        "lastDurationMs": 182024,
+        "consecutiveErrors": 1,
+        "lastRunStatus": "error",
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "lastDeliveryError": "⚠️ ✉️ Message failed",
+        "runningAtMs": 1773721800009
+      }
+    },
+    {
+      "id": "e1b719dc-47fb-45f7-b4b2-c36742813ce6",
+      "agentId": "main",
+      "name": "vault-sync",
+      "enabled": true,
+      "createdAtMs": 1772399848448,
+      "updatedAtMs": 1773705814057,
+      "schedule": {
+        "expr": "0 */6 * * *",
+        "kind": "cron",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Sync the Obsidian vault: 1) cd ~/obsidian-vault && git add -A 2) If there are changes, commit with message including current timestamp (format: \"Vault auto-save $(date +'%Y-%m-%d %H:%M')\") 3) git push to https://github.com/TeraHertz2000/tera-vault. Report only if there were changes and the push succeeded."
+      },
+      "delivery": {
+        "channel": "discord",
+        "to": "1481072502724759602",
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773727406432,
+        "lastRunAtMs": 1773705806443,
+        "lastStatus": "error",
+        "lastDurationMs": 7614,
+        "consecutiveErrors": 3,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "unknown",
+        "lastError": "Error: Discord bot token missing for account \"default\" (set discord.accounts.default.token or DISCORD_BOT_TOKEN for default)."
+      }
+    },
+    {
+      "id": "0bd24b87-4e9d-4cf4-8005-b21e45f87aca",
+      "agentId": "main",
+      "name": "conversation-review",
+      "enabled": true,
+      "createdAtMs": 1772402146774,
+      "updatedAtMs": 1773558249553,
+      "schedule": {
+        "expr": "0 3 * * *",
+        "tz": "America/New_York",
+        "kind": "cron"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "You are a memory consolidation agent. Your job is to review today's conversations and extract important information worth saving.\n\n## Your Task\n\n1. First, read the session history to find all conversations from today (2026-03-01). Look in:\n   - Discord channels (check message history)\n   - Any TUI sessions\n\n2. Extract anything worth remembering:\n   - Decisions made\n   - Preferences stated\n   - Facts about Noah\n   - Tasks completed or assigned\n   - Plans discussed\n   - Ideas generated\n   - Anything explicitly asked to remember\n   - Anything important that should be saved\n\n3. For each item extracted:\n   - Check if it already exists in ~/workspace/MEMORY.md or ~/workspace/memory/2026-03-01.md\n   - If new, write durable facts to ~/workspace/MEMORY.md\n   - Write daily context to ~/workspace/memory/2026-03-01.md\n   - File relevant content to appropriate ~/obsidian-vault/ folder:\n     - Fitness/health → projects/personal-trainer/\n     - Food/recipes → projects/personal-chef/\n     - Productivity/time-blocking → projects/time-blocking/\n     - Research/links → references/\n     - Daily logs → daily/2026-03-01.md\n   - Use clear filenames (e.g., \"leg-day-routine.md\", not \"notes.md\")\n   - Do NOT duplicate - update existing entries if something changed\n\n4. After writing everything, git commit and push the obsidian vault:\n   ```bash\n   cd ~/obsidian-vault\n   git add -A\n   git commit -m \"Memory update: $(date +%Y-%m-%d)\"\n   git push\n   ```\n\n5. Post a summary to the channel you were triggered from (or #general-chat if unknown). Format:\n   - \"📝 Saved X new items to memory\"\n   - \"📂 Updated Y vault files\"\n   - List each item on one line\n   - If nothing worth saving, post \"nothing new today\"\n\n## Important\n- Be thorough - check ALL channels\n- Don't fabricate entries - only save real information\n- Before writing, check if info already exists\n- Update existing files rather than creating duplicates"
+      },
+      "delivery": {
+        "channel": "discord",
+        "mode": "announce",
+        "to": "1477760568533323918"
+      },
+      "state": {
+        "nextRunAtMs": 1773730800000,
+        "lastRunAtMs": 1773558000009,
+        "lastStatus": "error",
+        "lastDurationMs": 249544,
+        "consecutiveErrors": 1,
+        "lastRunStatus": "error",
+        "lastDeliveryStatus": "delivered",
+        "lastDelivered": true
+      }
+    }
+  ]
+}

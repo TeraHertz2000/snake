@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Courier New', monospace;
+      color: #eee;
+    }
+    h1 { margin-bottom: 10px; letter-spacing: 4px; }
+    #score { margin-bottom: 15px; font-size: 1.2rem; }
+    canvas {
+      border: 3px solid #0f3460;
+      background: #16213e;
+      box-shadow: 0 0 20px rgba(233, 69, 96, 0.3);
+    }
+    #start {
+      margin-top: 20px;
+      padding: 10px 30px;
+      font-size: 1rem;
+      background: #e94560;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      letter-spacing: 2px;
+    }
+    #start:hover { background: #ff6b6b; }
+    .controls { margin-top: 15px; font-size: 0.8rem; color: #888; }
+  </style>
+</head>
+<body>
+  <h1>SNAKE</h1>
+  <div id="score">Score: 0</div>
+  <canvas id="game" width="400" height="400"></canvas>
+  <button id="start">START</button>
+  <div class="controls">Arrow keys to move</div>
+
+  <script>
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+    const scoreEl = document.getElementById('score');
+    const startBtn = document.getElementById('start');
+
+    const GRID = 20;
+    const TILE = canvas.width / GRID;
+
+    let snake, food, dx, dy, score, gameLoop, running;
+
+    function init() {
+      snake = [{ x: 10, y: 10 }];
+      food = spawnFood();
+      dx = 0;
+      dy = 0;
+      score = 0;
+      running = false;
+      scoreEl.textContent = 'Score: 0';
+      draw();
+    }
+
+    function spawnFood() {
+      return {
+        x: Math.floor(Math.random() * GRID),
+        y: Math.floor(Math.random() * GRID)
+      };
+    }
+
+    function draw() {
+      ctx.fillStyle = '#16213e';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Food
+      ctx.fillStyle = '#e94560';
+      ctx.fillRect(food.x * TILE + 2, food.y * TILE + 2, TILE - 4, TILE - 4);
+
+      // Snake
+      ctx.fillStyle = '#0f3460';
+      snake.forEach((seg, i) => {
+        ctx.fillStyle = i === 0 ? '#533483' : '#0f3460';
+        ctx.fillRect(seg.x * TILE + 1, seg.y * TILE + 1, TILE - 2, TILE - 2);
+      });
+    }
+
+    function update() {
+      const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+
+      // Wall collision
+      if (head.x < 0 || head.x >= GRID || head.y < 0 || head.y >= GRID) {
+        return gameOver();
+      }
+
+      // Self collision
+      if (snake.some(seg => seg.x === head.x && seg.y === head.y)) {
+        return gameOver();
+      }
+
+      snake.unshift(head);
+
+      // Eat food
+      if (head.x === food.x && head.y === food.y) {
+        score += 10;
+        scoreEl.textContent = `Score: ${score}`;
+        food = spawnFood();
+      } else {
+        snake.pop();
+      }
+
+      draw();
+    }
+
+    function gameOver() {
+      clearInterval(gameLoop);
+      running = false;
+      startBtn.textContent = 'RESTART';
+      ctx.fillStyle = 'rgba(0,0,0,0.7)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#e94560';
+      ctx.font = '30px Courier New';
+      ctx.textAlign = 'center';
+      ctx.fillText('GAME OVER', canvas.width/2, canvas.height/2);
+    }
+
+    document.addEventListener('keydown', e => {
+      if (!running && dx === 0 && dy === 0) return;
+      const keys = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0] };
+      if (keys[e.key] && !(dx === -keys[e.key][0] && dy === 0)) {
+        [dx, dy] = keys[e.key];
+      }
+    });
+
+    startBtn.addEventListener('click', () => {
+      init();
+      dx = 1;
+      dy = 0;
+      running = true;
+      startBtn.textContent = 'PLAYING...';
+      gameLoop = setInterval(update, 100);
+    });
+
+    init();
+  </script>
+</body>
+</html>

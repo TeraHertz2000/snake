@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.1",
+    "lastTouchedAt": "2026-03-03T02:29:31.283Z"
+  },
+  "env": {
+    "vars": {}
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-01T20:02:17.565Z",
+    "lastRunVersion": "2026.2.9",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      },
+      "minimax-portal:default": {
+        "provider": "minimax-portal",
+        "mode": "oauth"
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "minimax-portal": {
+        "baseUrl": "https://api.minimax.io/anthropic",
+        "apiKey": "REDACTED_API_KEY",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "MiniMax-M2.1",
+            "name": "MiniMax M2.1",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "MiniMax-M2.1-lightning",
+            "name": "MiniMax M2.1 Lightning",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "minimax-portal/MiniMax-M2.1",
+        "fallbacks": []
+      },
+      "models": {
+        "openrouter/anthropic/claude-sonnet-4.5": {},
+        "openrouter/openrouter/auto": {},
+        "openrouter/openrouter/pony-alpha": {},
+        "openrouter/auto": {
+          "alias": "OpenRouter"
+        },
+        "minimax-portal/MiniMax-M2.1": {
+          "alias": "minimax-m2.1"
+        },
+        "minimax-portal/MiniMax-M2.1-lightning": {
+          "alias": "minimax-m2.1-lightning"
+        }
+      },
+      "workspace": "/home/linuxuser/.openclaw/workspace",
+      "memorySearch": {
+        "provider": "local"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave",
+        "apiKey": "REDACTED_API_KEY"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "groupPolicy": "allowlist",
+      "actions": {
+        "channels": true
+      },
+      "guilds": {
+        "1470991105993736456": {
+          "requireMention": false,
+          "channels": {
+            "1470991107058827337": {
+              "allow": true,
+              "requireMention": true
+            },
+            "1470998185576239236": {
+              "allow": true,
+              "requireMention": false
+            },
+            "1470998295684845724": {
+              "allow": true,
+              "requireMention": false
+            },
+            "1477760568533323918": {
+              "allow": true,
+              "requireMention": false
+            },
+            "1477761036718313599": {
+              "allow": true,
+              "requireMention": false
+            },
+            "1477761037813027038": {
+              "allow": true,
+              "requireMention": false
+            },
+            "1477762879053631528": {
+              "allow": true,
+              "requireMention": false
+            },
+            "1477763850185998468": {
+              "allow": true,
+              "requireMention": false
+            },
+            "1481072502724759602": {
+              "allow": true,
+              "requireMention": false
+            },
+            "1477790472180207818": {
+              "allow": true,
+              "requireMention": false
+            }
+          }
+        },
+        "1477760568533323918": {
+          "channels": {
+            "1477760568533323918": {
+              "allow": true,
+              "requireMention": false
+            }
+          }
+        }
+      },
+      "streaming": "off"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "password",
+      "password": "P9eMEwi.E.iLx9"
+    },
+    "trustedProxies": [
+      "127.0.0.1"
+    ],
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "remote": {
+      "password": "P9eMEwi.E.iLx9"
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "discord": {
+        "enabled": true
+      },
+      "minimax-portal-auth": {
+        "enabled": true
+      }
+    }
+  }
+}

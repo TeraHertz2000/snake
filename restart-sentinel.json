@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "payload": {
+    "kind": "update",
+    "status": "error",
+    "ts": 1773720084316,
+    "sessionKey": "agent:main:cron:8e183fd9-a9ab-4e36-9433-bc077c8e87fd",
+    "message": "Auto-update from cron job",
+    "doctorHint": "Run: openclaw doctor --non-interactive",
+    "stats": {
+      "mode": "npm",
+      "root": "/usr/lib/node_modules/openclaw",
+      "before": {
+        "version": "2026.3.13"
+      },
+      "after": {
+        "version": "2026.3.13"
+      },
+      "steps": [
+        {
+          "name": "global update",
+          "command": "npm i -g openclaw@latest --no-fund --no-audit --loglevel=error",
+          "cwd": "/usr/lib/node_modules/openclaw",
+          "durationMs": 33490,
+          "log": {
+            "stdoutTail": null,
+            "stderrTail": "npm error code EACCES\nnpm error syscall rename\nnpm error path /usr/lib/node_modules/openclaw\nnpm error dest /usr/lib/node_modules/.openclaw-gX1GdeX9\nnpm error errno -13\nnpm error Error: EACCES: permission denied, rename '/usr/lib/node_modules/openclaw' -> '/usr/lib/node_modules/.openclaw-gX1GdeX9'\nnpm error     at async Object.rename (node:internal/fs/promises:781:10)\nnpm error     at async moveFile (/usr/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)\nnpm error     at async Promise.allSettled (index 0)\nnpm error     at async [reifyPackages] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)\nnpm error     at async Arborist.reify (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)\nnpm error     at async Install.exec (/usr/lib/node_modules/npm/lib/commands/install.js:150:5)\nnpm error     at async Npm.exec (/usr/lib/node_modules/npm/lib/npm.js:207:9)\nnpm error     at async module.exports (/usr/lib/node_modules/npm/lib/cli/entry.js:74:5) {\nnpm error   errno: -13,\nnpm error   code: 'EACCES',\nnpm error   syscall: 'rename',\nnpm error   path: '/usr/lib/node_modules/openclaw',\nnpm error   dest: '/usr/lib/node_modules/.openclaw-gX1GdeX9'\nnpm error }\nnpm error\nnpm error The operation was rejected by your operating system.\nnpm error It is likely you do not have the permissions to access this file as the current user\nnpm error\nnpm error If you believe this might be a permissions issue, please double-check the\nnpm error permissions of the file and its containing directories, or try running\nnpm error the command again as root/Administrator.\nnpm error A complete log of this run can be found in: /home/linuxuser/.npm/_logs/2026-03-17T04_00_39_766Z-debug-0.log",
+            "exitCode": 243
+          }
+        },
+        {
+          "name": "global update (omit optional)",
+          "command": "npm i -g openclaw@latest --omit=optional --no-fund --no-audit --loglevel=error",
+          "cwd": "/usr/lib/node_modules/openclaw",
+          "durationMs": 11156,
+          "log": {
+            "stdoutTail": null,
+            "stderrTail": "npm error code EACCES\nnpm error syscall rename\nnpm error path /usr/lib/node_modules/openclaw\nnpm error dest /usr/lib/node_modules/.openclaw-gX1GdeX9\nnpm error errno -13\nnpm error Error: EACCES: permission denied, rename '/usr/lib/node_modules/openclaw' -> '/usr/lib/node_modules/.openclaw-gX1GdeX9'\nnpm error     at async Object.rename (node:internal/fs/promises:781:10)\nnpm error     at async moveFile (/usr/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)\nnpm error     at async Promise.allSettled (index 0)\nnpm error     at async [reifyPackages] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)\nnpm error     at async Arborist.reify (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)\nnpm error     at async Install.exec (/usr/lib/node_modules/npm/lib/commands/install.js:150:5)\nnpm error     at async Npm.exec (/usr/lib/node_modules/npm/lib/npm.js:207:9)\nnpm error     at async module.exports (/usr/lib/node_modules/npm/lib/cli/entry.js:74:5) {\nnpm error   errno: -13,\nnpm error   code: 'EACCES',\nnpm error   syscall: 'rename',\nnpm error   path: '/usr/lib/node_modules/openclaw',\nnpm error   dest: '/usr/lib/node_modules/.openclaw-gX1GdeX9'\nnpm error }\nnpm error\nnpm error The operation was rejected by your operating system.\nnpm error It is likely you do not have the permissions to access this file as the current user\nnpm error\nnpm error If you believe this might be a permissions issue, please double-check the\nnpm error permissions of the file and its containing directories, or try running\nnpm error the command again as root/Administrator.\nnpm error A complete log of this run can be found in: /home/linuxuser/.npm/_logs/2026-03-17T04_01_13_237Z-debug-0.log",
+            "exitCode": 243
+          }
+        }
+      ],
+      "reason": "global update (omit optional)",
+      "durationMs": 44852
+    }
+  }
+}
